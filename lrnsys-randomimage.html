@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`lrnsys-randomimage`
+A LRN element
+
+@demo demo/index.html
+-->
+
+<dom-module id="lrnsys-randomimage">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>[[title]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'lrnsys-randomimage',
+
+      properties: {
+        title: {
+          type: String,
+          value: 'lrnsys-randomimage',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
