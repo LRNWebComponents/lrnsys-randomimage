@@ -1,0 +1,34 @@
+{
+  "name": "lrnsys-randomimage",
+  "description": "A LRN element",
+  "main": "lrnsys-randomimage.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "lrnsys-behaviors": "LRNWebComponents/lrnsys-behaviors#^1.0.0",
+    "hax-behaviors": "LRNWebComponents/hax-behaviors#^0.0.6",
+    "materializecss-styles": "LRNWebComponents/materializecss-styles#^0.0.5",
+    "paper-spinner": "PolymerElements/paper-spinner#^2.0.0",
+    "paper-tooltip": "PolymerElements/paper-tooltip#^2.0.0",
+    "random-image": "kilombo/random-image#^0.1.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  },
+  "homepage": "https://github.com/LRNWebComponents/lrnsys-randomimage",
+  "_release": "eb9063742b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "eb9063742b9b47047de5e98ac2c4dad98168f70a"
+  },
+  "_source": "https://github.com/LRNWebComponents/lrnsys-randomimage.git",
+  "_target": "master",
+  "_originalSource": "LRNWebComponents/lrnsys-randomimage",
+  "_direct": true
+}
