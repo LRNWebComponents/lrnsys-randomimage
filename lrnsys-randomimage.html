@@ -15,38 +15,34 @@ A LRN element
         display: block;
       }
     </style>
-    <h2>[[title]]</h2>
     <div id="image-list">
-    <random-image images-list="[
-  { &quot;path&quot;: &quot;http://www.buscoseo.com/wp-content/uploads/2015/07/HTML5.png&quot;, &quot;title&quot;: &quot;HTML5&quot; },
-  { &quot;path&quot;: &quot;https://rolandocaldas.com/wp-content/uploads/2013/10/css3-html5-e1383236383597.png&quot;, &quot;title&quot;: &quot;HTML5 &amp; CSS3&quot; },
-  { &quot;path&quot;: &quot;https://www.wonderbits.net/posts/48/p-logo-ai.svg&quot;, &quot;title&quot;: &quot;Polymer&quot; },
-  { &quot;path&quot;: &quot;https://frontendmasters.com/assets/google-developers-logo-vector.jpg&quot;, &quot;title&quot;: &quot;Google Developers Logo&quot; },
-  { &quot;path&quot;: &quot;https://www.polymer-project.org/images/1.0/summit-2016-flag.png&quot;, &quot;title&quot;: &quot;Polymer Summit 2016&quot; },
-  { &quot;path&quot;: &quot;https://i1.ytimg.com/vi/mN7IAaRdi_k/maxresdefault.jpg&quot;, &quot;title&quot;: &quot;Polymer&quot; }
-]"></random-image>
-</div>
-<paper-button raised><a href="javascript: reload()">New</a></paper-button>
+      <random-image images-list$="{{images}}"></random-image>
+  </div>
+  <paper-button raised on-click="reload">Reload</paper-button>
   </template>
 
   <script>
     Polymer({
-
       is: 'lrnsys-randomimage',
-
       properties: {
-        title: {
-          type: String,
-          value: 'lrnsys-randomimage',
-        },
-      },       
+        /**
+         * An array of images to pick from at random.
+         */
+        images: {
+          type: Object,
+          notify: true,
+          value: function() {
+              return [];
+          }
+        }
+      },
+      /**
+       * trigger a reload of the random-image element
+       */
+      reload: function(e) {
+        let root = this;
+        root.$$('#image-list').innerHTML = root.$$('#image-list').innerHTML;
+      }
     });
   </script>
-  <script type="text/javascript">
-    function reload(){
-            var container = document.getElementById("image-list");
-            var content = container.innerHTML;
-            container.innerHTML= content;
-        }
-</script>
 </dom-module>
